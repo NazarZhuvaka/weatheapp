@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <main class="weather">
+        <form class="form" action="">
+            <input class="form__input" type="text" placeholder="Enter city name">
+            <button class="form__btn">
+                <span class="material-symbols-outlined form__btn-img">
+                    search
+                </span>
+            </button>
+        </form>
+        <div class="weather__details">
+            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3430647/cloudy-sunny-icon-md.png" alt="Weather" class="weather__img">
+
+            <div class="weather__temp">22* c</div>
+            <div class="weather__city">New York</div>
+        </div>
+
+
+        <article class="weather__details">
+            <section class="details">
+                <img src="https://i1.wp.com/www.futurefarms.in/wp-content/uploads/2019/04/water-drop-icon.png?ssl=1" alt="" class="details__img">
+                <div class="details__value">50%</div>
+                <div class="details__title">Humidity</div>
+            </section>
+        </article>
+        <article class="weather__details">
+            <section class="details">
+                <img width="50px" src="https://cdn4.iconfinder.com/data/icons/outline-2/64/weather-wind-4096.png" alt="" class="details__img">
+                <div class="details__value">10 km/h</div>
+                <div class="details__title">Wind speed</div>
+            </section>
+        </article>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

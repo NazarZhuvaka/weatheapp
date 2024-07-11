@@ -1,0 +1,65 @@
+@import './reset.css';
+
+body {
+    font-family: sans-serif;
+    background-color: #282828;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather {
+    width: 320px;
+    height: 600px;
+    border-radius: 16px;
+    background: linear-gradient(169deg , #42d2a6 4.7% , #007991 95.98%), #389196;
+}
+
+.form{
+    margin:30px 20px 10px;
+    height: 40px;
+
+    display: flex;
+    align-items: stretch;
+
+
+    background-color: #fff;
+    border-radius: 60px;
+}
+
+.form__input{
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+.form__input::placeholder{
+    color: rgba(0, 0, 0, 0.5) ;
+}
+.form__btn {
+    padding: 0 10px;
+}
+
+.weather__details{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.weather__img{
+    margin-top: 10px;
+    width: 128px;
+}
+
+.weather__temp{
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.weather__city{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+}
