@@ -10,7 +10,7 @@
 <body>
 
     <main class="weather">
-        <form class="form" action="">
+        <form class="form" action="" id="form">
             <input class="form__input" type="text" placeholder="Enter city name">
             <button class="form__btn">
                 <span class="material-symbols-outlined form__btn-img">
@@ -18,7 +18,7 @@
                 </span>
             </button>
         </form>
-        <div class="weather__details">
+        <div class="weather__info">
             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3430647/cloudy-sunny-icon-md.png" alt="Weather" class="weather__img">
 
             <div class="weather__temp">22* c</div>
@@ -28,15 +28,13 @@
 
         <article class="weather__details">
             <section class="details">
-                <img src="https://i1.wp.com/www.futurefarms.in/wp-content/uploads/2019/04/water-drop-icon.png?ssl=1" alt="" class="details__img">
-                <div class="details__value">50%</div>
+                <img class="details__img" src="https://i1.wp.com/www.futurefarms.in/wp-content/uploads/2019/04/water-drop-icon.png?ssl=1" alt="" class="details__img">
+                <div class="details__value" id="humidity">50%</div>
                 <div class="details__title">Humidity</div>
             </section>
-        </article>
-        <article class="weather__details">
             <section class="details">
-                <img width="50px" src="https://cdn4.iconfinder.com/data/icons/outline-2/64/weather-wind-4096.png" alt="" class="details__img">
-                <div class="details__value">10 km/h</div>
+                <img class="details__img" width="50px" src="https://cdn4.iconfinder.com/data/icons/outline-2/64/weather-wind-4096.png" alt="" class="details__img">
+                <div class="details__value" id="speed">10 km/h</div>
                 <div class="details__title">Wind speed</div>
             </section>
         </article>

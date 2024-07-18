@@ -11,6 +11,7 @@ body {
 }
 
 .weather {
+    padding: 30px 20px;
     width: 320px;
     height: 600px;
     border-radius: 16px;
@@ -18,7 +19,6 @@ body {
 }
 
 .form{
-    margin:30px 20px 10px;
     height: 40px;
 
     display: flex;
@@ -42,14 +42,16 @@ body {
     padding: 0 10px;
 }
 
-.weather__details{
+.weather__info{
     padding-top: 10px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
 .weather__img{
     margin-top: 10px;
     width: 128px;
+    margin-bottom: 40px;
 }
 
 .weather__temp{
@@ -62,4 +64,24 @@ body {
     color: #fff;
     font-size: 38px;
     font-weight: 500;
+}
+
+.weather__details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details{
+    display: grid;
+    grid-template-columns: 36px auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    align-items: center;
+    
+}
+
+.details__img{
+    width: 32px;
+    grid-row: 1/3;
+    align-self: center;
 }
