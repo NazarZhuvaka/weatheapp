@@ -18,6 +18,10 @@ body {
     background: linear-gradient(169deg , #42d2a6 4.7% , #007991 95.98%), #389196;
 }
 
+.none{
+    display: none !important;
+}
+
 .form{
     height: 40px;
 

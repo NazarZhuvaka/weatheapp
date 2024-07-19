@@ -11,7 +11,13 @@ async function submitHandler(e) {
     console.log("Enter City name");
     return;
   }
-  const cityInfo = await getGeo(input.value.trim());
+
+  const cityName = input.value.trim();
+  input.value = "";
+
+  const cityInfo = await getGeo(cityName);
+
+  if (!cityInfo.length) return;
 
   const weatherInfo = await getGeoWeather(
     cityInfo[0]["lat"],
@@ -44,14 +50,37 @@ async function getGeoWeather(lat, lon) {
 }
 
 function renderWeatherData(data) {
+  document.querySelector(".weather__info").classList.remove('none')
+  document.querySelector(".weather__details").classList.remove('none')
+
   const temp = document.querySelector(".weather__temp");
   const city = document.querySelector(".weather__city");
   const humidity = document.querySelector("#humidity");
   const speed = document.querySelector("#speed");
+  const img = document.querySelector(".weather__img");
 
-  temp.innerText = Math.round(data.temp) + '*c';
+  temp.innerText = Math.round(data.temp) + "*c";
   city.innerText = data.name;
 
-  humidity.innerText = data.humidity + '%';
-  speed.innerText = data.speed + 'km/h';
+  humidity.innerText = data.humidity + "%";
+  speed.innerText = data.speed + "km/h";
+  const fileNames = {
+    Clouds: "clouds",
+    Clear: "clear",
+    Rain: "rain",
+    Mist: "mist",
+    Drizzle: "drizzle",
+  };
+
+  if (fileNames[data.main]) {
+    img.src = `./img/weather/${fileNames[data.main].png}`;
+  }
+
+  // switch (data.main) {
+  //   case "Clouds":
+  //     img.src =
+  //     break;
+  //   default:
+  //     break;
+  // }
 }
