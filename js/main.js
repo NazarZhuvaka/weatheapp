@@ -17,8 +17,6 @@ async function submitHandler(e) {
 
   const cityInfo = await getGeo(cityName);
 
-  if (!cityInfo.length) return;
-
   const weatherInfo = await getGeoWeather(
     cityInfo[0]["lat"],
     cityInfo[0]["lon"]
@@ -64,23 +62,16 @@ function renderWeatherData(data) {
 
   humidity.innerText = data.humidity + "%";
   speed.innerText = data.speed + "km/h";
+
   const fileNames = {
-    Clouds: "clouds",
-    Clear: "clear",
-    Rain: "rain",
-    Mist: "mist",
-    Drizzle: "drizzle",
+    "Clouds": "clouds",
+    "Clear": "clear",
+    "Rain": "rain",
+    "Mist": "mist",
+    "Drizzle": "drizzle",
   };
 
   if (fileNames[data.main]) {
-    img.src = `./img/weather/${fileNames[data.main].png}`;
+    img.src = `./img/weather/${fileNames[data.main]}.png`;
   }
-
-  // switch (data.main) {
-  //   case "Clouds":
-  //     img.src =
-  //     break;
-  //   default:
-  //     break;
-  // }
 }
